@@ -1,5 +1,5 @@
 # Introduction
-This is the source code of our CVPR 2019 paper "Sequential Cross-Modal Hashing Learning via Multi-scale Correlation Mining". Please cite the following paper if you use our code.
+This is the source code of our TOMM 2019 paper "Sequential Cross-Modal Hashing Learning via Multi-scale Correlation Mining". Please cite the following paper if you use our code.
 
 Zhaoda Ye and Yuxin Peng, "Sequential Cross-Modal Hashing Learning via Multi-scale Correlation Mining", ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), Vol. 15, No. 4, p. 105, Dec. 2019.(SCI, EI)
 
