@@ -65,7 +65,7 @@ class Dataloader(object):
 		return pos,neg
 		
 
-	def get_batch_wiki(self,batch_size=5):
+	def get_batch(self,batch_size=5):
 		ori_img_fc7=torch.zeros(batch_size,4096)		
 		pos_img_fc7=torch.zeros(batch_size,4096)		
 		neg_img_fc7=torch.zeros(batch_size,4096)
@@ -132,27 +132,5 @@ class Dataloader(object):
 		return pic,label		
 		
 		
-	def calc_m_s(self,batch_size=5000):
-		mean = torch.zeros(3)
-		std = torch.zeros(3)
-		for ix in range(0,batch_size):
-			x = self.get_image2(self.classidx,self.ix)
-			for i in range(3):
-				mean[i] += x[i].mean()
-				std[i] += x[i].std()
-			self.ix+=1
-			if self.ix==self.list[self.classidx]:
-				self.ix=self.start
-				self.classidx+=1
-			if self.classidx==self.classed:
-				self.classidx=self.classst
-		mean /= batch_size
-		std /= batch_size
-		return mean,std
-		
-	def get_valid(self,classidx,batch_size,bias):
-		pic=torch.zeros(batch_size,3,224,224)
-		for ix in range(bias,bias+batch_size):
-			pic[ix-bias]=self.get_image3(classidx,ix)
-		return pic
+
 			
