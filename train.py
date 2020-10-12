@@ -92,7 +92,7 @@ while True:
 	
 
 	if dataset=='mir':
-		ori_img_fc7,pos_img_fc7,neg_img_fc7,ori_img_fc6,pos_img_fc6,neg_img_fc6,ori_img_p5 ,pos_img_p5,neg_img_p5,ori_txt,pos_txt,neg_txt,lab=traintest.get_batch_wiki(batch_size)
+		ori_img_fc7,pos_img_fc7,neg_img_fc7,ori_img_fc6,pos_img_fc6,neg_img_fc6,ori_img_p5 ,pos_img_p5,neg_img_p5,ori_txt,pos_txt,neg_txt,lab=traintest.get_batch(batch_size)
 		
 	if tag_img:
 		ori_img_fc7=Variable(ori_img_fc7).cuda()
